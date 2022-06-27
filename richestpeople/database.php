@@ -1,16 +1,20 @@
 <?php
-$host = 'localhost';
-$user = 'admin_pdo_iosd2109c';
-$pass = 'fgQtoaQr0lyv8zJw';
-$dbname = 'oop-pdo-toets-herkansing';
+class Database {
 
-$dsn = "mysql:host=$host;dbname=$dbname";
+// properties
+private $host = 'localhost';
+private $user = 'admin_pdo_iosd2109c';
+private $pass = 'fgQtoaQr0lyv8zJw';
+private $dbname = 'oop-pdo-toets-herkansing';
 
-$sql = "SELECT * FROM richestpeople";
+private $sql = "SELECT * FROM richestpeople";
 
+function __construct()
+{
+  $dsn = "mysql:host=$this->host;dbname=$this->dbname";
   try {
-   $pdo = new PDO($dsn, $user, $pass);
-   $stmt = $pdo->query($sql);
+   $pdo = new PDO($dsn, $this->user, $this->pass);
+   $stmt = $pdo->query($this->sql);
 
    
    if($stmt === false){
@@ -20,3 +24,5 @@ $sql = "SELECT * FROM richestpeople";
   }catch (PDOException $e){
     echo $e->getMessage();
   }
+}
+}
