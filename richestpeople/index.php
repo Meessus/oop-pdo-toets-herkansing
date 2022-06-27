@@ -1,8 +1,5 @@
 <?php
-require '../functions.php';
-
-$db  = new Database();
-
+require './Database.php';
 ?>
 
 
@@ -12,7 +9,7 @@ $db  = new Database();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BE PDO herkansing</title>
+    <title>BE PDO Herkansing</title>
 </head>
 <body>
 <h2> De vijf rijkste mensen ter wereld</h2>
