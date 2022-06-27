@@ -1,10 +1,7 @@
 <?php
-require './Database.php';
+require '../functions.php';
 
-$naam = "Elon Musk";
-$vermogen = "1000000";
-$leeftijd = "50";
-$bedrijf = "Tesla";
+$db  = new Database();
 
 ?>
 
@@ -15,17 +12,17 @@ $bedrijf = "Tesla";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BE PDO herkansing</title>
 </head>
 <body>
 <h2> De vijf rijkste mensen ter wereld</h2>
 <table>
     <thead>
     <tr>
-    <th>Naamㅤㅤ</th>
-    <th>Vermogenㅤ</th>
-    <th>Leeftijdㅤ</th>
-    <th>Bedrijfㅤ</th>
+    <th>Naam</th>
+    <th>Vermogen</th>
+    <th>Leeftijd</th>
+    <th>Bedrijf</th>
     </tr>
   </thead>
   <tbody>
